@@ -49,7 +49,7 @@ class _MyHomePageState extends State<MyHomePage> {
               debugPrint('Barcode found! $code');
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => const InputPage()),
+                MaterialPageRoute(builder: (context) =>  MyCustomForm(url: code)),
               );
             }
           }),

@@ -30,6 +30,7 @@ dependencies:
   flutter:
     sdk: flutter
   mobile_scanner: ^2.0.0
+  http:
 
 
   # The following adds the Cupertino Icons font to your application.
