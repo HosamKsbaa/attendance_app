@@ -1,12 +1,13 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
+import 'Apis/Studnt.dart';
 import 'Models/Student.dart';
 
 
 
-void callTheApi(Student thisOne){
-
+void callTheApi(Student thisOne,String  url){
+  sendAStudent(thisOne,url);
   
 }
 
@@ -84,7 +85,7 @@ class MyCustomFormState extends State<MyCustomForm> {
                 onPressed: () {
                   // It returns true if the form is valid, otherwise returns false
                   if (_formKey.currentState!.validate()) {
-                    callTheApi(thisOne);
+                    callTheApi(thisOne,widget.url);
                     ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('Data is in processing.')));
                   }
                 },
